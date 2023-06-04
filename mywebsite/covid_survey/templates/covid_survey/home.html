@@ -5,12 +5,34 @@
 
     <center>
 
-    <h1>The coronavirus (COVID-19) pandemic has had a major impact across the world.
+    <h1>Covid Survey</h1>
+
+        The coronavirus (COVID-19) pandemic has had a major impact across the world.
         This survey is aimed to find out how many people are still getting the infection
         and how many have had the infection. This remains important as more people
-        got vaccinated against COVID-19 with “boosters” and more people got COVID-19.</h1>
+        got vaccinated against COVID-19 with “boosters” and more people got COVID-19.
 
 
     </center>
+
+
+<br/></br>
+
+
+<form method="post">
+    {% csrf_token %}
+    <h3>COVID Questionnaire</h3>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="infectedCheckbox" name="infected">
+        <label class="form-check-label" for="infectedCheckbox">Have you been infected?</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="immunizedCheckbox" name="immunized">
+        <label class="form-check-label" for="immunizedCheckbox">Have you been immunized?</label>
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
 
 {% endblock %}
